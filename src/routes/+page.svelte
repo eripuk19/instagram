@@ -4,7 +4,7 @@
     import { slide } from 'svelte/transition';
     export let data;
   </script>
-  <h1> insta clon</h1>
+  <h1> insta clone</h1>
   
   {#each data.articles as article}
     <div class="border border-gray-300 p-4 my-2 rounded-md shadow-sm flex justify-between items-center">
