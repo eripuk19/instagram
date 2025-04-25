@@ -19,6 +19,8 @@
       Add Article
     </a>
   </header>
+
+  <a href="/">Back Home</a>
   
   {#if form && !form.success}
     <div class="bg-red-100 text-red-700 p-3 my-2 rounded-md border border-red-300">

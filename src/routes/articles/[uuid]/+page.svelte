@@ -4,12 +4,14 @@
     import { slide } from 'svelte/transition';
     export let data;
   </script>
-  <h1> insta clone</h1>
+<a href="/">Back</a>
   
   {#each data.articles as article}
     <div class="border border-gray-300 p-4 my-2 rounded-md shadow-sm flex justify-between items-center">
-    <a href={`articles/${article.id}`}> <img src="{article.image}" alt="uploaded" class="w-114"/></a>
-      <p class="text-gray-800 font-medium">{article.author} -{article.votes} </p>
+        <img src="{article.image}" alt="uploaded" class="w-114"/>
+      <p class="text-gray-800 font-medium">{article.author} - {article.description} </p>
+      <p class="text-gray-800 font-medium">Likes: {article.votes} </p>
+
     </div>
   {/each}
   

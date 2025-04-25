@@ -1,6 +1,8 @@
 <h1 class="bg-antiquewhite p-4 text-xl font-bold text-center rounded-md shadow-md">
 	Add New Articles
   </h1>
+
+  <a href="/admin">Back to Admin</a>
   
   <form method="POST" action="?/createArticle" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md flex flex-col gap-4 w-80 mx-auto mt-6">
     <input type="file" name="image" class="border border-black p-2">
