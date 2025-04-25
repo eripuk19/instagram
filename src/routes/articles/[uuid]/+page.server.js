@@ -31,5 +31,24 @@ export const actions = {
 		} else {
 			return { error: 'Error while upvoting' };
 		}
-	}
+	},
+
+    commentImage: async ({ request }) => {
+        const formData = await request.formData();
+        const id = formData.get('article_id');
+        const comment = formData.get('comment');
+        const username = formData.get('username');
+
+        const connection = await createConnection();
+        const [result] = await connection.execute(
+            'INSERT INTO comments (article_id, text, name) VALUES (?, ?, ?)',
+            [id, comment, username]
+        );
+
+        if (result.affectedRows) {
+            return { success: true };
+        } else {
+            return { error: 'Error while commentig' };
+        }
+    }
 };
