@@ -1,25 +1,36 @@
-<h1 class="bg-antiquewhite p-4 text-xl font-bold text-center rounded-md shadow-md">
-	Add New Articles
-  </h1>
+<h1 class="bg-slate-100 p-5 text-3xl font-bold text-center rounded-lg shadow text-slate-800">
+	Add New Article
+</h1>
 
-  <a href="/admin">Back to Admin</a>
-  
-  <form method="POST" action="?/createArticle" enctype="multipart/form-data" class="bg-white p-6 rounded-lg shadow-md flex flex-col gap-4 w-80 mx-auto mt-6">
-    <input type="file" name="image" class="border border-black p-2">
-    <button type="submit" class="border border-black p-2">
-        Upload an image
-    </button>
-	<label for="description" class="font-medium">Description</label>
-	<textarea type="text" placeholder="Description" name="description" 
-		   class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-  
-	<label for="author" class="font-medium">Author</label>
-	<input placeholder="Author" name="author" 
-			  class="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-24" required/>
-  
-	<button type="submit" 
-			class="bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 transition">
-	  Add Article
+<div class="px-4 mt-4 text-sm text-center">
+	<a href="/admin" class="text-indigo-600 hover:underline">← Back to Admin</a>
+</div>
+
+<form method="POST" action="?/createArticle" enctype="multipart/form-data"
+	class="bg-white p-8 mt-8 rounded-2xl shadow-lg max-w-lg mx-auto flex flex-col gap-6 border border-slate-200">
+
+	<div>
+		<label class="block text-sm font-semibold mb-2 text-slate-700" for="image">Upload Image</label>
+		<input type="file" name="image"
+			class="w-full border border-slate-300 rounded-md p-2 file:bg-indigo-50 file:text-indigo-700 file:font-medium file:rounded file:px-4 file:py-1.5 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+	</div>
+
+	<div>
+		<label for="description" class="block text-sm font-semibold mb-2 text-slate-700">Description</label>
+		<textarea name="description" placeholder="Write a short description..."
+			class="w-full border border-slate-300 rounded-md p-3 h-28 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500"
+			required></textarea>
+	</div>
+
+	<div>
+		<label for="author" class="block text-sm font-semibold mb-2 text-slate-700">Author</label>
+		<input type="text" name="author" placeholder="Author name"
+			class="w-full border border-slate-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+			required />
+	</div>
+
+	<button type="submit"
+		class="bg-indigo-600 text-white font-semibold py-2.5 rounded-md hover:bg-indigo-700 transition-all shadow-sm">
+		Add Article
 	</button>
-  </form>
-  
+</form>
